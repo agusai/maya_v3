@@ -1,17 +1,18 @@
 # utils/config.py
 
 import os
+import streamlit as st
 from dotenv import load_dotenv
-import yaml  # optional, kalau nak guna YAML config
 
 load_dotenv()
 
 class Config:
     """Central configuration - single source of truth"""
     
-    # API Keys
-    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-    MASTER_NAME = os.getenv("MASTER_NAME", "Agus")
+    # API Keys - SEKARANG LEBIH BIJAK
+    # Dia akan cuba cari kat Streamlit Secrets dulu, kalau takde baru guna .env
+    GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+    MASTER_NAME = st.secrets.get("MASTER_NAME", os.getenv("MASTER_NAME", "Abang"))
     
     # App settings
     APP_NAME = "MaYa Petite V3"
@@ -20,18 +21,18 @@ class Config:
     
     # Mood settings
     DEFAULT_MOOD = "Lembut"
-    MOOD_CONFIDENCE_THRESHOLD = 0.6  # minimum confidence for auto-switch
+    MOOD_CONFIDENCE_THRESHOLD = 0.6 
     
     # Memory settings
     CHROMA_COLLECTION = "maya_chats"
     SQLITE_PATH = "maya_mood.db"
     
     # Greeting settings
-    USE_DYNAMIC_GREETING = True  # True = AI generate, False = scripted
+    USE_DYNAMIC_GREETING = True 
     
     @classmethod
     def get_gemini_model(cls):
         """Return appropriate Gemini model based on mode"""
         if cls.DEBUG:
-            return "gemini-1.5-flash"  # fast for testing
-        return "gemini-1.5-pro"  # more capable for production
+            return "gemini-1.5-flash"
+        return "gemini-1.5-pro"
