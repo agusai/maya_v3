@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+audit_logs/
+chroma_db/
+maya_mood.db
