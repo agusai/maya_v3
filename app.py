@@ -84,7 +84,7 @@ def generate_greeting():
     """
     
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")
+        model = genai.GenerativeModel("gemini-2.5-flash-lite")
         response = model.generate_content(prompt)
         return response.text.strip()
     except:
@@ -375,7 +375,7 @@ if prompt := st.chat_input("Apa yang Abang nak sembang hari ni?"):
                 mood_prompt += f"\n\n[CONTEXT]: {doc_context[:2000]}"
             
             # FIXED: Cara baru hantar instruction
-            model = genai.GenerativeModel('gemini-1.5-flash') 
+            model = genai.GenerativeModel('gemini-2.5-flash-lite') 
             full_prompt = f"{mood_prompt}\n\n{st.session_state.get('memory_context', '')}\nUser: {prompt}\n\nMaya:"            
             response = model.generate_content(full_prompt)
             full_response = response.text
