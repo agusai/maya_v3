@@ -190,17 +190,46 @@ def apply_suggested_mood():
 
 st.markdown("""
     <style>
-    .stApp { background-color: #0A0A0A; color: #FFFFFF; }
-    .stChatMessage { border-radius: 15px; margin-bottom: 10px; 
-                     border: 1px solid #444; background-color: #1E1E1E; }
-    .stChatMessage p, .stChatMessage span, .stChatMessage div {
-        color: #FFFFFF !important; font-size: 1.05rem; }
-    .stButton>button { background-color: #D4AF37; color: black; 
-                       border-radius: 20px; font-weight: bold; width: 100%; }
-    h1, h2, h3, h4 { color: #D4AF37 !important; }
-    [data-testid="stSidebar"] { color: #FFFFFF; }
-    .mood-badge { background-color: #D4AF37; color: #0A0A0A; padding: 5px 10px;
-                  border-radius: 20px; font-weight: bold; text-align: center; }
+    /* 1. Background Obsidian Deep */
+    .stApp {
+        background-color: #050505 !important;
+    }
+
+    /* 2. Kecilkan Title supaya tak makan ruang skrin HP */
+    h1 {
+        font-size: 1.5rem !important;
+        color: #FFB7C5 !important; /* Soft Pink Maya */
+        text-align: center;
+        margin-bottom: 0px !important;
+    }
+
+    /* 3. Design Chat Bubble Maya (Lebih Bulat & Kemas) */
+    [data-testid="stChatMessage"] {
+        background-color: #121212 !important;
+        border: 1px solid rgba(255, 183, 197, 0.1);
+        border-radius: 18px !important;
+        padding: 12px !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* 4. Munculkan Header Butang (Sangat Penting!) */
+    header[data-testid="stHeader"] {
+        background: transparent !important;
+    }
+    button[kind="header"] {
+        color: #FFB7C5 !important;
+    }
+
+    /* 5. Input Bar yang Nampak 'High-Tech' */
+    [data-testid="stChatInput"] {
+        border-radius: 20px !important;
+        border: 1px solid rgba(255, 183, 197, 0.3) !important;
+        background-color: #0A0A0A !important;
+    }
+
+    /* 6. Hilangkan kesan 'Streamlit' yang mengganggu eye-sight */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
