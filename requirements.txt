@@ -1,0 +1,19 @@
+# ===== CORE FRAMEWORK =====
+streamlit==1.31.0
+
+# ===== AI & GEMINI =====
+google-generativeai==0.3.2
+
+# ===== MEMORY & DATABASE =====
+chromadb==0.4.22
+pypdf2==3.0.1
+
+# ===== CONFIGURATION =====
+python-dotenv==1.0.0
+
+# ===== DATA PROCESSING =====
+pandas==2.1.4
+numpy==1.26.0
+
+# ===== AUDIT & LOGGING =====
+sqlite3-fts4==1.0.0
