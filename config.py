@@ -34,5 +34,5 @@ class Config:
     def get_gemini_model(cls):
         """Return appropriate Gemini model based on mode"""
         if cls.DEBUG:
-            return "gemini-1.5-flash"
-        return "gemini-1.5-pro"
+            return "gemini--flash"
+        return "gemini-2.5-pro"
