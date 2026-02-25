@@ -4,3 +4,28 @@
 
 # Example dependency
 # package_name==version
+# Core Framework
+streamlit==1.31.0
+
+# AI/ML
+google-generativeai>=0.3.0
+
+# Database & Memory
+chromadb>=0.4.22,<1.0.0
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.26.0
+
+# File Processing
+PyPDF2>=3.0.0
+pillow>=10.0.0
+python-docx>=0.8.11
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Utilities
+requests>=2.30.0
+python-dateutil>=2.8.0
+pytz>=2024.0
