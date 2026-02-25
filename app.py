@@ -27,7 +27,7 @@ st.set_page_config(
 
 # Initialize all components
 config = Config()
-genai.configure(api_key=config.GEMINI_API_KEY)
+#genai.configure(api_key=config.GEMINI_API_KEY)
 mood_detector = MoodDetector()
 mood_db = MoodDatabase(config.SQLITE_PATH)
 vault = MayaVault()
