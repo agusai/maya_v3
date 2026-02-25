@@ -11,8 +11,8 @@ class Config:
     
     # API Keys - SEKARANG LEBIH BIJAK
     # Dia akan cuba cari kat Streamlit Secrets dulu, kalau takde baru guna .env
-    GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
-    MASTER_NAME = st.secrets.get("MASTER_NAME", os.getenv("MASTER_NAME", "Abang"))
+    #GEMINI_API_KEY = st.secrets.get("GEMINI_API_KEY", os.getenv("GEMINI_API_KEY"))
+    #MASTER_NAME = st.secrets.get("MASTER_NAME", os.getenv("MASTER_NAME", "Abang"))
     
     # App settings
     APP_NAME = "MaYa Petite V3"
